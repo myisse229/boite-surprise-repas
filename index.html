@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Boîte Surprise – Tâches Repas & Après-Repas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<main class="container">
+
+  <section class="hero">
+
+    <div class="emoji">🎁</div>
+
+    <h1>BOÎTE SURPRISE</h1>
+
+    <h2>TÂCHES REPAS & APRÈS-REPAS</h2>
+
+    <p>
+      Choisis ton service, indique ton prénom
+      et ouvre ta boîte !
+    </p>
+
+  </section>
+
+
+  <section class="card">
+
+    <label for="prenom">
+      Ton prénom
+    </label>
+
+    <input
+      id="prenom"
+      maxlength="40"
+      autocomplete="off"
+      placeholder="Ex. Lucas"
+    >
+
+
+    <div class="service-grid">
+
+      <button
+        class="service active"
+        data-service="midi"
+      >
+        🍽️ MIDI
+      </button>
+
+
+      <button
+        class="service"
+        data-service="soir"
+      >
+        🌙 SOIR
+      </button>
+
+    </div>
+
+
+    <button
+      id="openBox"
+      class="open-box"
+    >
+      🎁 OUVRIR MA BOÎTE
+    </button>
+
+
+    <p
+      id="message"
+      class="message"
+    ></p>
+
+
+    <div
+      id="result"
+      class="result hidden"
+    >
+
+      <div class="result-label">
+        TA TÂCHE
+      </div>
+
+
+      <div
+        id="task"
+        class="task"
+      ></div>
+
+
+      <div
+        id="resultMeta"
+        class="result-meta"
+      ></div>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<script>
+
+window.API_URL =
+"https://script.google.com/macros/s/AKfycbwCR_YUDjV7NupG9SGqIPGTLvHhKb8S62B960smtJnIMdQmuV6Reob2d42VkDVKO7s/exec";
+
+</script>
+
+
+<script src="app.js"></script>
+
+</body>
+</html>
