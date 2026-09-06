@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width,initial-scale=1"
+  >
+
+  <title>
+    Éducateur – Boîte Surprise Repas
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+</head>
+
+
+<body>
+
+<main class="container educator">
+
+
+  <!-- =========================
+       TITRE
+  ========================== -->
+
+  <section class="hero">
+
+    <div class="emoji">
+      🧑‍🏫
+    </div>
+
+    <h1>
+      ESPACE ÉDUCATEUR
+    </h1>
+
+    <h2>
+      BOÎTE SURPRISE – REPAS & APRÈS-REPAS
+    </h2>
+
+  </section>
+
+
+  <!-- =========================
+       CONNEXION
+  ========================== -->
+
+  <section
+    id="loginCard"
+    class="card"
+  >
+
+    <label for="pin">
+      Code PIN éducateur
+    </label>
+
+    <input
+      id="pin"
+      type="password"
+      inputmode="numeric"
+      maxlength="12"
+      placeholder="••••"
+    >
+
+    <button
+      id="loginBtn"
+      class="primary"
+    >
+      🔐 SE CONNECTER
+    </button>
+
+    <p
+      id="loginMessage"
+      class="message"
+    ></p>
+
+  </section>
+
+
+  <!-- =========================
+       TABLEAU DE BORD
+  ========================== -->
+
+  <section
+    id="dashboard"
+    class="hidden"
+  >
+
+
+    <!-- BARRE D'OUTILS -->
+
+    <div class="toolbar card">
+
+      <div>
+
+        <strong id="todayLabel"></strong>
+
+        <div class="muted">
+
+          Les attributions du midi et du soir
+          sont indépendantes.
+
+        </div>
+
+      </div>
+
+
+      <div class="toolbar-actions">
+
+        <button
+          id="refreshBtn"
+          class="secondary"
+        >
+          🔄 Actualiser
+        </button>
+
+
+        <button
+          id="printBtn"
+          class="secondary"
+        >
+          🖨️ Imprimer
+        </button>
+
+
+        <button
+          id="resetBtn"
+          class="danger"
+        >
+          ♻️ Réinitialiser aujourd'hui
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- =========================
+         MIDI
+    ========================== -->
+
+    <section class="card">
+
+      <h3>
+        🍽️ TÂCHES DU MIDI
+      </h3>
+
+
+      <div class="table-wrap">
+
+        <table>
+
+          <thead>
+
+            <tr>
+
+              <th>
+                Jeune
+              </th>
+
+              <th>
+                Tâche
+              </th>
+
+              <th>
+                Statut
+              </th>
+
+              <th>
+                Action
+              </th>
+
+            </tr>
+
+          </thead>
+
+
+          <tbody id="midiBody">
+          </tbody>
+
+        </table>
+
+      </div>
+
+
+      <p
+        id="midiEmpty"
+        class="muted empty"
+      >
+        Aucune attribution pour le midi.
+      </p>
+
+    </section>
+
+
+    <!-- =========================
+         SOIR
+    ========================== -->
+
+    <section class="card">
+
+      <h3>
+        🌙 TÂCHES DU SOIR
+      </h3>
+
+
+      <div class="table-wrap">
+
+        <table>
+
+          <thead>
+
+            <tr>
+
+              <th>
+                Jeune
+              </th>
+
+              <th>
+                Tâche
+              </th>
+
+              <th>
+                Statut
+              </th>
+
+              <th>
+                Action
+              </th>
+
+            </tr>
+
+          </thead>
+
+
+          <tbody id="soirBody">
+          </tbody>
+
+        </table>
+
+      </div>
+
+
+      <p
+        id="soirEmpty"
+        class="muted empty"
+      >
+        Aucune attribution pour le soir.
+      </p>
+
+    </section>
+
+
+    <!-- =========================
+         TÂCHES DISPONIBLES
+    ========================== -->
+
+    <section class="card">
+
+      <h3>
+        ⚙️ TÂCHES DISPONIBLES
+      </h3>
+
+      <p class="muted">
+
+        Les tâches disponibles sont affichées
+        ci-dessous.
+
+      </p>
+
+
+      <div
+        id="taskList"
+        class="task-list"
+      ></div>
+
+    </section>
+
+
+  </section>
+
+</main>
+
+
+<!-- =========================
+     URL DU SERVEUR
+========================== -->
+
+<script>
+
+window.API_URL =
+"https://script.google.com/macros/s/AKfycbwCR_YUDjV7NupG9SGqIPGTLvHhKb8S62B960smtJnIMdQmuV6Reob2d42VkDVKO7s/exec";
+
+</script>
+
+
+<script src="educateur.js"></script>
+
+</body>
+
+</html>
